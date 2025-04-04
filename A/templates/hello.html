@@ -6,9 +6,15 @@
 </head>
 <body>
 
-    <h3>
-        hello user...
-    </h3>
+    {% if user == admin %}
+        <h3>
+            you are admin sorry... !
+        </h3>
+    {% else %}
+        <h3>
+            hello {{ name|capfirst }}... !
+        </h3>
+    {% endif %}
 
 </body>
 </html>

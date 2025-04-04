@@ -6,4 +6,4 @@ def home(request):
     return render(request, 'home.html')
 
 def hello(request):
-    return render(request, 'home.html')
+    return render(request, 'hello.html', context={'name':'mobin'})

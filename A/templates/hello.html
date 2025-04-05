@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta CHARSET="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
+{% block title %}Hello{% endblock %}
+
+{% block content %}
     {% if user == admin %}
         <h3>
             you are admin sorry... !
@@ -15,6 +12,4 @@
             hello {{ name|capfirst }}... !
         </h3>
     {% endif %}
-
-</body>
-</html>
+{% endblock %}

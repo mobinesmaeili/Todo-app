@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta CHARSET="UTF-8">
-    <title>Home</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <h3>
-        this is home page body
-    </h3>
+{% block title %}Home{% endblock %}
 
-</body>
-</html>
+{% block content %}
+    {% for todo in todos %}
+        <h3>{{ todo.title }}</h3>
+        <small>{{ todo.created_at }}</small>
+        <p>{{ todo.body }}</p>
+    {% endfor %}
+{% endblock %}

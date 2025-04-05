@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from home.models import *
 
 
 def home(request):
-    return render(request, 'home.html')
+    todos = Todo.objects.all()
+    return render(request, 'home.html', context={'todos': todos})
 
 def hello(request):
     return render(request, 'hello.html', context={'name':'mobin'})

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Detail page{% endblock %}
+
+{% block content %}
+    <h3>{{ todo.title }}</h3>
+    <small>{{ todo.created_at }}</small><hr/>
+    <p>{{ todo.body }}</p>
+{% endblock %}
+

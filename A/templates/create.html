@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>create todo</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="alert alert-primary" type="submit" value="create">
+    </form>
+{% endblock %}

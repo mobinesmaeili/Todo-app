@@ -3,9 +3,14 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+    
+    <div class="navbar-brand" >{{ request.user }}</div>
+
     <div class="card">
         {% for todo in todos %}
             <a class="card-body" href="{% url 'detail' todo.id %}">{{ todo.title }}</a><br/>
         {% endfor %}
     </div>
 {% endblock %}
+
+
